@@ -1,10 +1,14 @@
-﻿namespace Space_Odyssey.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Space_Odyssey.Models
 {
     public class Manifacturer
     {
-        //TODO: Connect to spaceship and country
         public int Id { get; set; }
+        [Required, MaxLength(100)]
         public string Name { get; set; }
-
+        public int CountryId { get; set; }
+        public Country Country { get; set; }
+        public ICollection<Spaceship> Spaceships { get; } = new List<Spaceship>();
     }
 }
