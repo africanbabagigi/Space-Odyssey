@@ -1,6 +1,6 @@
 ﻿namespace Space_Odyssey.Models
 {
-    public class AstronautRoles
+    public class AstronautRole
     {
         public int Id { get; set; }
         public string Title { get; set; }
