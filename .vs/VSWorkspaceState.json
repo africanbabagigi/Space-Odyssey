@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Space Odyssey",
+    "\\Space Odyssey\\Space Odyssey",
+    "\\Space Odyssey\\Space Odyssey\\Models"
   ],
+  "SelectedNode": "\\Space Odyssey\\Space Odyssey\\Models\\Country.cs",
   "PreviewInSolutionExplorer": false
 }
