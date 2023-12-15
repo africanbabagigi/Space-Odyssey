@@ -10,5 +10,6 @@
         public int MaximumDistanceKM { get; set; }
         public int SpaceshipId { get; set; }
         public Spaceship Spaceship { get; set; }
+        public ICollection<Astronaut> Astronaunts { get; } = new List<Astronaut>();
     }
 }
