@@ -12,6 +12,6 @@ namespace Space_Odyssey.Models
         public int MaximumDistanceKM { get; set; }
         public int SpaceshipId { get; set; }
         public Spaceship Spaceship { get; set; }
-        public ICollection<MissionAstronautRole> MissionAstronautRoles { get; } = new List<MissionAstronautRole>();
+        public ICollection<MissionAstronautRole> MissionAstronautRoles { get; set; }
     }
 }

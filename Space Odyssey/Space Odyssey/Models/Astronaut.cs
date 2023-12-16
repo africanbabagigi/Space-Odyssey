@@ -11,7 +11,7 @@ namespace Space_Odyssey.Models
         public string PictureUrl { get; set; }
         public int CountryId { get; set; }
         public Country Country { get; set; }
-        public ICollection<MissionAstronautRole> MissionAstronautRoles { get; } = new List<MissionAstronautRole>();
+        public ICollection<MissionAstronautRole> MissionAstronautRoles { get; set; }
     }
 
 }

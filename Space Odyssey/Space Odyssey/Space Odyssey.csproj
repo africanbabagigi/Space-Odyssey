@@ -5,6 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>Space_Odyssey</RootNamespace>
+    <UserSecretsId>912cbfc5-f4b3-4621-be38-179f708611f6</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>

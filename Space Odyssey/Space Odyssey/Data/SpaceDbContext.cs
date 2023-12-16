@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Space_Odyssey.Models;
+using System.Drawing;
+using System.Reflection;
 
 namespace Space_Odyssey.Data
 {
@@ -15,27 +17,10 @@ namespace Space_Odyssey.Data
         DbSet<Manifacturer> Manifacturers { get; set; }
         DbSet<Spaceship> Spaceships { get; set; }
         DbSet<Mission> Missions { get; set; }
-        DbSet<MissionAstronautRole> MissionAstronautRoles { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<MissionAstronautRole>()
-                .HasKey(amr => new { amr.AstronautId, amr.RoleId, amr.MissionId });
-
-            modelBuilder.Entity<MissionAstronautRole>()
-                .HasOne(amr => amr.Astronaut)
-                .WithMany(a => a.MissionAstronautRoles)
-                .HasForeignKey(amr => amr.AstronautId);
-
-            modelBuilder.Entity<MissionAstronautRole>()
-                .HasOne(amr => amr.AstronautRole)
-                .WithMany(ar => ar.MissionAstronautRoles)
-                .HasForeignKey(amr => amr.RoleId);
-
-            modelBuilder.Entity<MissionAstronautRole>()
-                .HasOne(amr => amr.Mission)
-                .WithMany(m => m.MissionAstronautRoles)
-                .HasForeignKey(amr => amr.MissionId);
+            modelBuilder.Entity<MissionAstronautRole>().HasKey(mar => new { mar.AstronautRoleId, mar.AstronautId, mar.MissionId });
         }
     }
 }

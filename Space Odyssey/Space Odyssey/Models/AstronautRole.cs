@@ -4,7 +4,7 @@
     {
         public int Id { get; set; }
         public string Title { get; set; }
-        public ICollection<MissionAstronautRole> MissionAstronautRoles { get; } = new List<MissionAstronautRole>();
+        public ICollection<MissionAstronautRole> MissionAstronautRoles { get; set; }
     }
 
 }
